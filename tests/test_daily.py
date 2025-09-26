@@ -13,3 +13,9 @@ def test_daily_generated_case_001():
     assert task.priority == 2
     assert "daily" in task.tags
 
+def test_daily_generated_case_008():
+    task = Task(title="Daily generated task 8", priority=2, project="research")
+    task.add_tag("daily")
+    assert task.priority == 2
+    assert "daily" in task.tags
+
