@@ -1935,3 +1935,164 @@ def validation_daily_119_07(tasks: list[Task], reference: date | None = None) ->
         "reference": today.isoformat(),
     }
 
+def validation_daily_129_01(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.1 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-01",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def validation_daily_129_02(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.2 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-02",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def validation_daily_129_03(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.3 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-03",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def validation_daily_129_04(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.4 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-04",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def validation_daily_129_05(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.5 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-05",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def validation_daily_129_06(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.6 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-06",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def validation_daily_129_07(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 129.7 created on 2026-01-25."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "validation-129-07",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
