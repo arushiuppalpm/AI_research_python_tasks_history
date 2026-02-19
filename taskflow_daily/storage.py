@@ -2418,3 +2418,164 @@ def storage_daily_144_07(tasks: list[Task], reference: date | None = None) -> di
         "reference": today.isoformat(),
     }
 
+def storage_daily_154_01(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.1 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-01",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def storage_daily_154_02(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.2 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-02",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def storage_daily_154_03(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.3 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-03",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def storage_daily_154_04(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.4 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-04",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def storage_daily_154_05(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.5 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-05",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def storage_daily_154_06(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.6 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-06",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
+def storage_daily_154_07(tasks: list[Task], reference: date | None = None) -> dict[str, object]:
+    """Daily taskflow feature 154.7 created on 2026-02-19."""
+    today = reference or date.today()
+    active = [task for task in tasks if task.status != Status.DONE]
+    completed = [task for task in tasks if task.status == Status.DONE]
+    blocked = [task for task in tasks if task.status == Status.BLOCKED]
+    due_soon = [task for task in active if task.due is not None and task.due <= today + timedelta(days=7)]
+    high_priority = [task for task in active if task.priority <= 2]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "storage-154-07",
+        "total": len(tasks),
+        "active": len(active),
+        "completed": len(completed),
+        "blocked": len(blocked),
+        "due_soon": len(due_soon),
+        "high_priority": len(high_priority),
+        "projects": projects,
+        "tags": tags,
+        "reference": today.isoformat(),
+    }
+
