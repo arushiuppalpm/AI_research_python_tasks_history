@@ -4028,3 +4028,16 @@ def calendar_daily_247_07(tasks: list[Task], reference: date | None = None) -> d
         "reference": today.isoformat(),
     }
 
+
+
+def pr_ready_feature_05(tasks: list[Task]) -> dict[str, object]:
+    """Add calendar planning view."""
+    active = [task for task in tasks if task.status != Status.DONE]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "feature/calendar-planning-view",
+        "active": len(active),
+        "projects": projects,
+        "tags": tags,
+    }
