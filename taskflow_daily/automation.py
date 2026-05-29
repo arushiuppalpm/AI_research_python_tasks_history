@@ -4028,3 +4028,16 @@ def automation_daily_248_07(tasks: list[Task], reference: date | None = None) ->
         "reference": today.isoformat(),
     }
 
+
+
+def pr_ready_feature_04(tasks: list[Task]) -> dict[str, object]:
+    """Add workflow automation rules."""
+    active = [task for task in tasks if task.status != Status.DONE]
+    projects = sorted({task.project for task in tasks})
+    tags = sorted({tag for task in tasks for tag in task.tags})
+    return {
+        "feature": "feature/workflow-automation-rules",
+        "active": len(active),
+        "projects": projects,
+        "tags": tags,
+    }
